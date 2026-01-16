@@ -1,8 +1,8 @@
-import {Card, Typography} from "@mui/joy";
-import {CssVarsProvider, extendTheme} from "@mui/joy";
+import { Card, Typography } from "@mui/joy";
+import { CssVarsProvider, extendTheme } from "@mui/joy";
 //import {useState} from "react";
 
-export default function JsonView({jsonText} : any){
+export default function JsonView({ jsonText }: any) {
     const theme = extendTheme({
         components: {
             JoyCard: {
@@ -10,18 +10,14 @@ export default function JsonView({jsonText} : any){
                     variant: 'outlined',
                     color: 'primary'
                 }
-            },
-            JoyTypography : {
-                defaultProps : {
-                    fontFamily: '"Google Sans Code", sans-serif'
-                }
             }
         }
     });
-    return(
+    return (
         <CssVarsProvider theme={theme}>
             <Card>
-                <Typography>{jsonText}</Typography>
+                <Typography level="title-lg">JSON View</Typography>
+                <Typography sx={{ fontFamily: '"Google Sans Code", sans-serif' }}>{jsonText}</Typography>
             </Card>
         </CssVarsProvider>
     );
