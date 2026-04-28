@@ -2,7 +2,7 @@ import ManifestEditor from '../components/Editor/ManifestEditor.tsx';
 import JsonView from '../components/Editor/JsonView.tsx';
 import JsonEditor from '../components/Editor/JsonEditor.tsx';
 import { CssVarsProvider, extendTheme } from '@mui/joy';
-import { Box, Grid } from '@mui/joy';
+import { Grid } from '@mui/joy';
 import { useState } from 'react';
 export default function Editor() {
     const [manifest, setManifest] = useState<any>(null);
